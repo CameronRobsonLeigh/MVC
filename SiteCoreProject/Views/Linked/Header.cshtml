@@ -1,0 +1,14 @@
+﻿@using SiteCoreProject.Models
+@using Sitecore.Mvc
+@model HeaderModel
+
+
+<div class="header">
+    <div class="header__logo">
+        @Model.LogoText
+        <a class="header__logo-sub">@Model.SubLogoText</a>
+    </div>
+
+    <a class="header__quote" href="#">@Model.QuoteText</a>
+    @Html.Sitecore().Placeholder("navigation")
+</div>

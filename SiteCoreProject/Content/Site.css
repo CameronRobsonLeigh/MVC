@@ -1,0 +1,139 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.txt-white {
+    color: white;
+}
+
+.txt-blue {
+    color: blue;
+}
+
+#coltImage:hover {
+    cursor: pointer;
+}
+
+.header__logo {
+    color: white;
+    width: 55%;
+    /* border: 1px solid red; */
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__logo-main {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 3rem;
+    text-decoration:none;
+    color:white;
+    /* border: 1px solid red; */
+}
+
+.header__logo-sub {
+    margin-top: -10px;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-weight: 600;
+    font-size: 1rem;
+    /* border: 1px solid red; */
+}
+
+.header__quote {
+    color: white;
+    background: rgb(255, 140, 45);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+/* Desktop */
+@media only screen and (min-width: 823px) {
+
+    .header {
+        display: flex;
+        height: 59px;
+        position: relative; /* So that menu__list-tier-2 can be positioned absolutely */
+        top: 30px;
+        left: 0;
+        background: rgb(0, 128, 128, 0.8);
+    }
+
+    .header__logo {
+        width: 20%;
+    }
+
+    .header__quote {
+        width: 20%;
+        font-weight: 500;
+        order: 2;
+    }
+
+    .header__bars {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 823px) {
+    .header {
+        display: flex;
+        height: 59px;
+        background: rgb(0, 128, 128, 0.8);
+    }
+
+    .header__menu-list {
+        display: flex;
+        list-style: none;
+        align-items: stretch;
+    }
+
+    .header__menu-item {
+        border: 1px solid white;
+    }
+
+    .header__quote {
+        width: 25%;
+        /* border: 1px solid red; */
+    }
+
+
+    .header__bars {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        fill: white;
+        width: 20%;
+        /* height: 50px; */
+        /* border: 1px solid red; */
+        padding: 0 0;
+        margin: 0 0;
+    }
+
+    .header__bars-icon {
+        height: 35px;
+        width: 35px;
+        /* border: 1px solid rgb(255, 234, 47); */
+    }
+}
+
+

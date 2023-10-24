@@ -1,0 +1,69 @@
+﻿@using SiteCoreProject.Models
+@model FooterModel
+
+
+<div class="footer">
+    <div class="wrapper footer__wrapper">
+        <hr>
+        <div class="footer__flex">
+            <div class="footer__contact">
+                <h4 class="footer__logo-main">@Model.LogoText</h4>
+                <ul>
+                    <li>
+                        <h3 class="footer__heading">@Model.ContactSalesLabel</h3>
+                        <p class="footer__contact-info">@Model.ContactSalesNumber</p>
+                    </li>
+                    <li>
+                        <h3 class="footer__heading">@Model.ContactSupportLabel</h3>
+                        <p class="footer__contact-info">@Model.ContactSupportNumber</p>
+                    </li>
+                    <li>
+                        <h3 class="footer__heading">@Model.EmailLabel</h3>
+                        <p class="footer__contact-info">@Model.EmailAddress</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__quick-links">
+                <h4 class="footer__heading">@Model.QuickLinksTitle</h4>
+
+                <ul>
+                @foreach (var menuItem in Model.QuickLinksNavigationsList)
+                {
+                    <li><a class="footer__link" href="#">@menuItem.Link</a></li>
+                }
+                </ul>
+            </div>
+            <div class="footer__key-locations">
+                <h4 class="footer__heading">@Model.KeyLocationsTitle</h4>
+                <ul>
+                @foreach (var menuItem in Model.KeyLocationsNavigationsList)
+                {
+                    <li><a class="footer__link">@menuItem.Link</a></li>
+                }
+                </ul>
+            </div>
+            <div class="footer__data-centres">
+                <div>
+                    <h4 class="footer__heading">@Model.DataCentresTitle</h4>
+                    <ul>
+                        @foreach (var menuItem in Model.DataCentresNavigationsList)
+                        {
+                            <li>
+                                <a class="footer__link" href="#">@menuItem.Link</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+
+                <div class="footer__social-media">
+                @foreach (var menuItem in Model.SocialMediaList)
+                {
+                    @menuItem.Icon
+                    @menuItem.Link
+                }
+                </div>
+            </div>
+        </div>
+        <p class="footer__copyright">@Model.CopyRightText</p>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+﻿@using SiteCoreProject.Models
+@model TopNavigationModel
+
+
+<div class="menu__main">
+    <p class="menu__name">Menuu</p>
+    <ul class="menu__list-tier-1">
+        @foreach (var menuItem in Model.TopNavigation)
+        {
+            <li class="menu__item-tier-1">
+                <button class="menu__btn-tier-1" onclick="location.href = '@menuItem.Link'">
+                    <span class="menu__btn-text">
+                        @menuItem.Title
+                    </span>
+                    <div class="menu__accordion-tier-1-outer">
+                        <div class="menu__accordion-tier-1-inner"></div>
+                    </div>
+                </button>
+                <ul class="menu__list-tier-2">
+                <li class="menu__item-tier-2">
+                    <button class="menu__btn-tier-2">
+                        <span class="menu__btn-text-tier-2">Data Centres in Europe</span>
+                        <div class="menu__accordion-tier-2-outer">
+                            <div class="menu__accordion-tier-2-inner"></div>
+                        </div>
+                    </button>
+                    <ul class="menu__list-tier-3">
+                        <li class="menu__item-tier-3"><a class="menu__btn-tier-3" href="#">Dummy link</a></li>
+                        <li class="menu__item-tier-3"><a class="menu__btn-tier-3" href="#">Dummy link long name super long</a></li>
+                        <li class="menu__item-tier-3"><a class="menu__btn-tier-3" href="#">Dummy link</a></li>
+                        <li class="menu__item-tier-3"><a class="menu__btn-tier-3" href="#">Dummy link</a></li>
+                        <li class="menu__item-tier-3"><a class="menu__btn-tier-3" href="#">Dummy link</a></li>
+                    </ul>
+                </li>
+                </ul>
+            </li>
+
+        }
+        </ul>
+
+    <a class="menu__img-container">
+        <img class="menu__img" src="Assets/images/server690_460.jpg">
+        <p class="menu__img-heading">Visit a Data Centre</p>
+        <p class="menu__img-sub">Book a tour now</p>
+    </a>
+    <button class="menu__login">
+
+        <svg class="menu__user-icon"
+             xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 512 512">
+            <path d="M437.02 330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521 243.251 404 198.548 404 148 404 66.393 337.607 0 256 0S108 66.393 108 148c0 50.548 25.479 95.251 64.262 121.962-36.21 12.495-69.398 33.136-97.281 61.018C26.629 379.333 0 443.62 0 512h40c0-119.103 96.897-216 216-216s216 96.897 216 216h40c0-68.38-26.629-132.667-74.98-181.02zM256 256c-59.551 0-108-48.448-108-108S196.449 40 256 40s108 48.448 108 108-48.449 108-108 108z" />
+        </svg>
+        <span class="menu__login-text">Client login</span>
+    </button>
+    <select class="menu__lang-select">
+        <option value="english">English</option>
+        <option value="chinese">Chinese</option>
+    </select>
+</div>
+
+<button class="header__bars">
+    <svg class="header__bars-icon"
+         viewBox="0 10 400 250"
+         xmlns="http://www.w3.org/2000/svg">
+        <path d="M368 154.67H16a16 16 0 010-32h352a16 16 0 010 32zm0 0M368 32H16a16 16 0 010-32h352a16 16 0 010 32zm0 0M368 277.33H16a16 16 0 010-32h352a16 16 0 010 32zm0 0" />
+    </svg>
+</button>
